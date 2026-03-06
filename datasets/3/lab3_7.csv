@@ -1,0 +1,351 @@
+,Expirience,Rating,Status
+0,4.0,1.3,Decline
+1,3.6,0.62,Decline
+2,3.1,2.92,Decline
+3,1.9,1.33,Decline
+4,4.1,1.2,Decline
+5,5.0,2.63,Decline
+6,5.4,0.55,Decline
+7,3.4,2.74,Decline
+8,2.2,1.34,Decline
+9,4.5,1.79,Decline
+10,2.9,1.23,Decline
+11,3.8,2.45,Decline
+12,1.2,2.4,Decline
+13,1.2,1.48,Decline
+14,3.4,1.7,Decline
+15,5.8,1.91,Decline
+16,2.1,1.59,Decline
+17,2.1,2.01,Decline
+18,5.1,2.76,Decline
+19,3.3,2.26,Decline
+20,4.3,2.76,Decline
+21,1.5,2.71,Decline
+22,3.8,2.62,Decline
+23,3.6,2.01,Decline
+24,0.4,1.68,Decline
+25,5.0,0.82,Decline
+26,3.5,2.49,Decline
+27,4.2,2.2,Decline
+28,1.3,2.41,Decline
+29,2.1,2.78,Decline
+30,3.7,1.1,Decline
+31,2.5,2.03,Decline
+32,3.3,0.77,Decline
+33,4.4,1.25,Decline
+34,1.1,1.94,Decline
+35,2.3,0.52,Decline
+36,2.6,1.6,Decline
+37,3.2,0.71,Decline
+38,1.9,1.29,Decline
+39,4.2,2.01,Decline
+40,3.7,2.99,Decline
+41,3.3,2.56,Decline
+42,3.1,1.12,Decline
+43,0.4,2.8,Decline
+44,4.1,2.86,Decline
+45,3.8,1.92,Decline
+46,3.9,2.9,Decline
+47,3.3,1.38,Decline
+48,4.5,1.14,Decline
+49,4.0,1.32,Decline
+50,3.6,1.01,Decline
+51,2.6,1.99,Decline
+52,3.9,1.82,Decline
+53,4.4,2.8,Decline
+54,2.4,1.28,Decline
+55,4.2,2.62,Decline
+56,1.2,2.02,Decline
+57,4.9,0.82,Decline
+58,2.7,0.58,Decline
+59,4.7,0.69,Decline
+60,4.6,1.93,Decline
+61,4.0,1.08,Decline
+62,1.1,2.29,Decline
+63,5.2,1.4,Decline
+64,5.0,1.01,Decline
+65,3.5,0.84,Decline
+66,2.9,0.74,Decline
+67,4.0,1.03,Decline
+68,2.3,1.51,Decline
+69,4.2,2.14,Decline
+70,3.1,1.1,Decline
+71,3.7,2.92,Decline
+72,4.3,1.22,Decline
+73,3.9,1.71,Decline
+74,2.9,2.52,Decline
+75,4.5,0.71,Decline
+76,2.7,0.69,Decline
+77,3.4,2.99,Decline
+78,2.9,2.89,Decline
+79,3.8,1.99,Decline
+80,3.5,0.68,Decline
+81,2.8,2.49,Decline
+82,3.6,1.21,Decline
+83,3.6,2.47,Decline
+84,2.7,2.39,Decline
+85,2.7,2.79,Decline
+86,4.4,2.11,Decline
+87,2.4,0.77,Decline
+88,3.2,2.32,Decline
+89,3.5,2.78,Decline
+90,3.0,0.71,Decline
+91,2.9,0.76,Decline
+92,2.1,2.77,Decline
+93,4.3,1.61,Decline
+94,3.7,1.36,Decline
+95,3.3,1.8,Decline
+96,2.4,1.02,Decline
+97,2.2,1.9,Decline
+98,2.8,0.57,Decline
+99,2.5,2.43,Decline
+100,9.9,2.57,Hire
+101,9.9,3.88,Hire
+102,7.9,3.39,Hire
+103,11.6,4.78,Hire
+104,9.9,3.5,Hire
+105,10.9,3.89,Hire
+106,12.1,4.76,Hire
+107,12.0,4.24,Hire
+108,9.7,2.84,Hire
+109,10.0,3.54,Hire
+110,10.3,4.26,Hire
+111,12.7,2.63,Hire
+112,8.5,4.98,Hire
+113,10.1,4.32,Hire
+114,10.9,4.06,Hire
+115,11.3,4.77,Hire
+116,9.7,4.37,Hire
+117,9.5,4.55,Hire
+118,11.6,4.09,Hire
+119,10.2,4.11,Hire
+120,11.6,4.24,Hire
+121,10.0,3.14,Hire
+122,9.4,3.39,Hire
+123,7.0,2.73,Hire
+124,10.6,4.7,Hire
+125,10.4,2.65,Hire
+126,9.3,4.12,Hire
+127,8.0,4.0,Hire
+128,10.8,3.62,Hire
+129,9.6,4.79,Hire
+130,11.6,4.55,Hire
+131,8.2,3.35,Hire
+132,10.0,2.62,Hire
+133,8.8,2.67,Hire
+134,9.2,4.06,Hire
+135,8.6,4.43,Hire
+136,10.7,3.39,Hire
+137,7.3,3.73,Hire
+138,10.4,3.35,Hire
+139,11.4,4.31,Hire
+140,8.9,4.4,Hire
+141,7.9,4.33,Hire
+142,10.8,3.1,Hire
+143,10.9,3.9,Hire
+144,10.4,3.47,Hire
+145,12.0,4.16,Hire
+146,9.5,3.84,Hire
+147,8.3,2.76,Hire
+148,7.3,3.83,Hire
+149,7.3,3.04,Hire
+150,7.2,3.84,Hire
+151,10.2,4.96,Hire
+152,8.5,3.1,Hire
+153,9.0,4.94,Hire
+154,12.6,4.24,Hire
+155,8.9,2.56,Hire
+156,7.5,2.81,Hire
+157,10.9,3.42,Hire
+158,8.7,3.11,Hire
+159,9.9,3.46,Hire
+160,9.9,4.91,Hire
+161,10.3,4.92,Hire
+162,11.2,4.26,Hire
+163,11.8,3.21,Hire
+164,9.3,3.46,Hire
+165,10.1,3.33,Hire
+166,10.4,2.57,Hire
+167,10.1,3.68,Hire
+168,10.4,3.57,Hire
+169,11.4,3.68,Hire
+170,13.4,4.29,Hire
+171,10.8,2.54,Hire
+172,10.2,4.28,Hire
+173,10.5,3.6,Hire
+174,10.3,2.65,Hire
+175,11.2,3.01,Hire
+176,11.8,4.05,Hire
+177,12.5,3.0,Hire
+178,11.4,2.58,Hire
+179,9.1,4.94,Hire
+180,9.6,3.79,Hire
+181,9.8,3.2,Hire
+182,9.4,4.88,Hire
+183,9.4,3.48,Hire
+184,9.0,2.7,Hire
+185,10.9,2.98,Hire
+186,10.2,3.19,Hire
+187,9.4,3.05,Hire
+188,9.6,3.93,Hire
+189,7.9,2.56,Hire
+190,8.1,4.61,Hire
+191,9.1,3.1,Hire
+192,10.8,4.98,Hire
+193,10.1,2.88,Hire
+194,9.4,2.98,Hire
+195,9.4,3.92,Hire
+196,11.0,3.42,Hire
+197,10.2,4.11,Hire
+198,10.4,4.92,Hire
+199,10.5,2.71,Hire
+200,7.5,2.63,For consideration
+201,6.6,1.63,For consideration
+202,6.7,2.09,For consideration
+203,7.1,3.12,For consideration
+204,6.9,1.93,For consideration
+205,7.1,2.97,For consideration
+206,5.5,2.35,For consideration
+207,5.8,2.73,For consideration
+208,7.0,3.14,For consideration
+209,6.2,0.99,For consideration
+210,7.6,2.93,For consideration
+211,5.8,3.06,For consideration
+212,6.4,3.56,For consideration
+213,7.5,1.57,For consideration
+214,6.6,2.41,For consideration
+215,6.8,2.23,For consideration
+216,5.9,1.6,For consideration
+217,7.0,2.85,For consideration
+218,6.3,2.88,For consideration
+219,6.5,3.38,For consideration
+220,6.5,3.28,For consideration
+221,5.8,2.58,For consideration
+222,7.1,2.14,For consideration
+223,6.4,2.88,For consideration
+224,6.7,2.38,For consideration
+225,5.8,3.19,For consideration
+226,6.3,2.68,For consideration
+227,7.5,4.54,For consideration
+228,6.3,3.23,For consideration
+229,6.7,2.13,For consideration
+230,6.0,0.37,For consideration
+231,5.6,2.47,For consideration
+232,5.5,2.59,For consideration
+233,5.5,2.15,For consideration
+234,7.6,1.7,For consideration
+235,6.9,2.7,For consideration
+236,6.6,3.99,For consideration
+237,7.4,3.93,For consideration
+238,7.2,2.89,For consideration
+239,6.4,2.69,For consideration
+240,5.5,3.09,For consideration
+241,6.5,2.03,For consideration
+242,7.6,3.01,For consideration
+243,6.5,2.66,For consideration
+244,7.4,2.55,For consideration
+245,7.0,1.78,For consideration
+246,6.6,2.59,For consideration
+247,5.5,3.26,For consideration
+248,6.1,2.17,For consideration
+249,5.9,2.09,For consideration
+250,6.4,2.48,For consideration
+251,5.7,3.6,For consideration
+252,7.5,2.5,For consideration
+253,7.6,3.55,For consideration
+254,7.4,2.5,For consideration
+255,6.7,3.09,For consideration
+256,6.5,1.83,For consideration
+257,6.0,2.61,For consideration
+258,6.4,2.26,For consideration
+259,6.0,2.68,For consideration
+260,6.0,2.35,For consideration
+261,6.5,2.45,For consideration
+262,7.4,1.84,For consideration
+263,7.3,2.26,For consideration
+264,5.7,3.08,For consideration
+265,6.8,3.48,For consideration
+266,7.2,2.46,For consideration
+267,5.9,2.88,For consideration
+268,6.8,2.57,For consideration
+269,5.5,2.95,For consideration
+270,6.5,2.75,For consideration
+271,5.9,3.55,For consideration
+272,5.6,1.54,For consideration
+273,7.3,2.38,For consideration
+274,6.0,1.55,For consideration
+275,5.8,2.31,For consideration
+276,6.6,1.61,For consideration
+277,6.8,2.02,For consideration
+278,6.5,1.64,For consideration
+279,6.5,1.97,For consideration
+280,5.6,3.2,For consideration
+281,6.1,2.93,For consideration
+282,7.3,3.96,For consideration
+283,5.9,2.25,For consideration
+284,7.2,2.46,For consideration
+285,6.2,2.89,For consideration
+286,5.4,1.35,For consideration
+287,6.1,3.19,For consideration
+288,6.2,1.24,For consideration
+289,7.4,3.09,For consideration
+290,6.4,0.64,For consideration
+291,6.1,2.67,For consideration
+292,5.9,3.42,For consideration
+293,6.2,1.52,For consideration
+294,6.2,2.91,For consideration
+295,7.0,0.71,For consideration
+296,7.0,2.95,For consideration
+297,5.4,0.8,For consideration
+298,6.7,3.8,For consideration
+299,5.7,2.41,For consideration
+300,7.3,2.93,For consideration
+301,6.9,3.12,For consideration
+302,6.4,2.82,For consideration
+303,5.7,2.17,For consideration
+304,7.6,1.7,For consideration
+305,7.5,1.45,For consideration
+306,6.7,1.41,For consideration
+307,6.6,2.16,For consideration
+308,5.5,2.09,For consideration
+309,5.4,2.34,For consideration
+310,7.2,2.06,For consideration
+311,6.2,4.24,For consideration
+312,5.8,2.16,For consideration
+313,7.4,2.81,For consideration
+314,6.0,2.97,For consideration
+315,5.6,4.08,For consideration
+316,6.2,2.46,For consideration
+317,6.3,1.83,For consideration
+318,6.8,0.88,For consideration
+319,5.4,2.99,For consideration
+320,6.6,2.04,For consideration
+321,7.6,1.56,For consideration
+322,6.9,2.73,For consideration
+323,7.5,3.63,For consideration
+324,7.0,2.94,For consideration
+325,6.4,1.39,For consideration
+326,7.6,2.52,For consideration
+327,6.6,1.74,For consideration
+328,7.4,2.97,For consideration
+329,6.8,2.74,For consideration
+330,6.4,3.9,For consideration
+331,7.0,3.14,For consideration
+332,7.3,2.61,For consideration
+333,6.3,2.29,For consideration
+334,5.9,1.61,For consideration
+335,5.5,1.53,For consideration
+336,7.3,2.85,For consideration
+337,5.8,1.55,For consideration
+338,7.2,2.69,For consideration
+339,6.0,3.32,For consideration
+340,7.3,2.27,For consideration
+341,6.4,1.87,For consideration
+342,6.6,3.28,For consideration
+343,5.9,1.92,For consideration
+344,7.1,2.53,For consideration
+345,6.4,2.84,For consideration
+346,6.9,2.19,For consideration
+347,7.0,0.82,For consideration
+348,6.3,2.57,For consideration
+349,6.0,1.83,For consideration
