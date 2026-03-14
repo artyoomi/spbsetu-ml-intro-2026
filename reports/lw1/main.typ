@@ -5,17 +5,21 @@ Latex reference from one cool guy:
 https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/title.tex
 */
 
+
+// Page setup
 #set page(
   width: 210mm,
   height: 297mm,
   margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm)
 )
 
+// General text setup
 #set text(
   size: 14pt,
   lang: "ru"
 )
 
+// Paragraph setup
 #set par(
   leading: 1.5em,
   first-line-indent: 1.25cm,
@@ -25,6 +29,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
 // To provide numeration like 1, 1.1, 1.1.1 and so on
 #set enum(full: true)
 
+// Setup level 1 header
 #show heading.where(level: 1): it => [
   #set text(size: 14pt, weight: "bold")
   #set par(first-line-indent: 0pt, leading: 1.5em)
@@ -32,36 +37,31 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
   #upper(it.body)
 ]
 
+// Setup level 2 header
 #show heading.where(level: 2): it => [
   #set text(size: 14pt, weight: "bold")
   #set par(first-line-indent: 1.25cm, leading: 1.5em, justify: true)
   #it.body
 ]
 
+// Setup table captions
+#show figure.where(kind: table): fig => {
+  align(left)[
+    #fig.caption
+    #fig.body
+  ]
+}
+
 // Long "-" between numering and caption in all figures
 #show figure: set figure.caption(separator: [ ---])
 
-// Style for listing
-// #show figure.where(kind: raw): it => [
-//   #set align(left)
-//   #set text(font: "Liberation Mono", size: 14pt)
-//   #set par(first-line-indent: 0pt, leading: 1em)
-//   #it.body
-// ]
-#show figure.where(kind: raw): set align(left)
-#show figure.where(kind: raw): set par(leading: 1em)
+// Force all raw blocks to have 1em indent between lines
+#show raw.where(block: true): set par(leading: 1em)
+// Force all raw blocks to have left alignment
+#show raw.where(block: true): set align(left)
 
-// #show figure.where(kind: table): it => [
-//   #set text(size: 14pt)
-//   #set par(first-line-indent: 0pt, leading: 1em)
 
-//   #show figure.caption: set align(left)
-  
-//   #it.caption
-//   #it.body
-// ]
-//#show figure.where(kind: table): set figure.caption(position: top)
-
+// First page setup
 #align(center)[
   #set text(weight: "semibold")
 
@@ -101,7 +101,6 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
   Санкт-Петербург \
   #datetime.today().year()
 ]
-
 #pagebreak()
 
 // Start numbering here to skip first page numering
@@ -111,14 +110,15 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
 
 // To make indent before first header
 \
+
 == Задание
 
 + Изучение набора данных с использованием Pandas и Seaborn:
   + Загрузить данные из файла как Pandas DataFrame
   + Вызвав  у датафрейма метод head, проверить корректность загруженных данных
-  + Вызвав  у датафрейма метод describe, получить характеристики. Опишите полученный результат. 
+  + Вызвав  у датафрейма метод describe, получить характеристики. Опишите полученный результат.
   + Видоизмените полученный датафрейм таким образом, чтобы метка классов были следующими: Class1, Class2 и т.д.. Сохраните полученный датафрейм в отдельный файл формата csv.
-  + Визуально оцените набор данных, построив изображение, содержащее графики ядерной оценки плотности каждого признака (кроме признака названия/ номера класса), диаграмму рассеяния и двумерную ядерную оценку плотности для каждых признаков. Наблюдения разных классов должны быть выделены отдельным цветом (рекомендуемая палитра ‘tab10’ или ‘Set1’). Пример построения: https://seaborn.pydata.org/examples/pair_grid_with_kde.html . Опишите полученный график, что на нем изображено, какие выводы о данных можно сделать. 
+  + Визуально оцените набор данных, построив изображение, содержащее графики ядерной оценки плотности каждого признака (кроме признака названия/ номера класса), диаграмму рассеяния и двумерную ядерную оценку плотности для каждых признаков. Наблюдения разных классов должны быть выделены отдельным цветом (рекомендуемая палитра ‘tab10’ или ‘Set1’). Пример построения: https://seaborn.pydata.org/examples/pair_grid_with_kde.html . Опишите полученный график, что на нем изображено, какие выводы о данных можно сделать.
   + На одном изображении постройте гистограммы распределения для каждого признака (для построения нескольких диаграмм на одном изображении, необходимо создать subplot из matplotlib, и для каждой диаграммы задать параметр ax, указав нужную ячейку. subplot возвращает два параметра: саму фигуру с изображением и список ячеек. Например, изображение с 4 ячейками записанных в ряд: fig, axs = plt.subplots(1,4). Указание ячейки в параметре диаграммы делается следующим образом: ax=axs[0]). Затем последовательно модифицируйте изображение:
     + Постройте гистограммы для разного количества столбцов: 5,10,15,20,30. Выберите на ваш взгляд такое количество столбцов, который лучшие образом описывает форму распределения признаков.
     + Сделайте на каждой гистограмме разделение по цвету согласно классу. Проведите это в двух режимах, когда гистограммы накладываются/суммируются и когда пересекаются. Далее используйте режим с пересечением.
@@ -130,7 +130,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
   + Рассчитайте характеристики полученные методом describe в п. 1.3 с использованием методов NumPy. Обращайте внимание на то, где оценка смещенная, а где нет.
 + Преобразование данных:
   + Получите из датафрейма из п. 1.4 столбец с названием классов. Используя LabelEncoder и OneHotEncoder получите различные способы кодирования меток класса. В чем различия полученных кодировок?
-  + Для датафрейма из п. 1.4, получите все столбцы признаков (столбцы не содержащие метки классов). Преобразуйте полученные столбцы в массив NumPy. 
+  + Для датафрейма из п. 1.4, получите все столбцы признаков (столбцы не содержащие метки классов). Преобразуйте полученные столбцы в массив NumPy.
   + Для массива NumPy из п. 3.2 примените StandardScaler, MinMaxScaler, MaxAbsScaler и RobustScaler. Для каждого из результатов постройте гистограммы по каждому признаку без разделения по классам. В чем различия между такими преобразованиями данных? Какая трансформация подходит лучше всего под ваш датасет?
 + Понижение размерности:
   + Для набора данных примените понижение размерности, используя PCA и TSNE из Sklearn. Для PCA оцените необходимое количество компонент для сохранения информации ~90%. Для каждого из результатов постройте диаграмму рассеяния с выделением разным цветом наблюдений разных классов. Объясните полученные результаты.
@@ -140,7 +140,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
 
 + Изучение набора данных с использованием Pandas и Seaborn:
   + Загрузка данных из csv в Pandas производится с помощью функции `pd.read_csv`. Также с помощью функции `pd.drop()` было решено отбросить столбец с нумерацией наблюдений, так как Pandas сам нумерует их.
-  
+
   + Вывод метода `pd.head` представлен в @head_df.
     #figure(
       caption: [
@@ -149,7 +149,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       table(
         columns: 7,
         align: center,
-        
+
         [], [*Var1*], [*Var2*], [*Var3*], [*Var4*], [*Var5*],  [*Label*],
         "0",  "1050.881652",  "210.176330",  "475.128618",   "85.077171",  "380.102894",      "2",
         "1",  "1051.893048",  "210.378610",  "522.030039",  "313.218023",  "417.624031",      "3",
@@ -159,10 +159,10 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       )
     ) <head_df>
 
-    Dataframe выглядит адекватно, значит данные подгрузились без ошибок. 
-  
+    Dataframe выглядит адекватно, значит данные подгрузились без ошибок.
+
   + Вывод метода `df.describe()` представлен в @describe_df.
-  
+
     #figure(
       caption: [
         Вывод метода `df.describe()`.
@@ -170,7 +170,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       table(
         columns: 7,
         align: center,
-        
+
         [], [__*Var1*__], [__*Var2*__], [__*Var3*__], [__*Var4*__], [__*Var5*__], [__*Label*__],
         [count], [100.0], [100.0], [100.0], [100.0], [100.0], [100.0],
         [mean], [1000.6670], [200.1334], [499.9308], [299.9585], [399.9446], [1.47],
@@ -182,11 +182,11 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
         [max], [1068.0248], [213.6050], [537.6034], [322.5621], [430.0827], [3.0],
       )
     ) <describe_df>
-    
+
     Судя по данным датасет корректен с точки зрения количества наблюдений, т.к. каждый из признаков представлен в количестве 100 штук.
-      
+
   + Для изменения названий признаков использована функция map стандартной библиотеки Python и строковая функция replace. Код для преобразования `df` представлен в @replace_var_with_class.
-    
+
     #figure(
       ```python
       df.columns = map(
@@ -197,9 +197,9 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
         Код для переименования `Var*` в `Class*`.
       ]
     ) <replace_var_with_class>
-    
+
     Полученный объект DataFrame сохранён в файл с помощью функции `df.to_csv()`.
-  
+
   + Для построения указанного графика создан объект `sns.PairGrid(..., hue='Label', diag_sharey=False)`. Параметр `hue='Label'` указывает кластеризовать наблюдения по цвету в зависимости от значения наблюдения "Label", а `diag_sharey=False` (не смотря на то, что это параметр по умолчанию, кажется необходимым подсветить этот момент) позволяет каждой функции плотности иметь свой диапазон значений `y`. Это позволяет оценивать детали распределения, так как в ином случае меньшие по максимальному значению распределения были бы "прижаты" к оси абсцисс. Результат построения графиков изображён на @pairplot_result.
     #figure(
       image(
@@ -211,7 +211,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
     ) <pairplot_result>
 
     Судя по полученной матрице графиков для графиков рассеяния и графиков двумерной ядерной функции, признаки 1 и 2, 3 и 4, 3 и 5, 4 и 5 линейно зависимы. В остальном судя по графикам рассеяния есть чёткое разделение меток "Label" между классами -- большинство точек одинакового цвета сгруппированы в своих облаках. Есть выбросы.
-  
+
   + Для того чтобы не дублировать код при модификациях гистограмм написан небольшой класс для инкапсуляции логики их построения. Некоторые значения в нём прописываются жёстко на этапе конструирования экземпляра, остальные принимаются как ключевые аргументы.
 
     #figure(
@@ -225,7 +225,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
             self.subplots_width  = floor(len(features)**0.5)
             self.subplots_height = \
               ceil(len(features) / self.subplots_width)
-    
+
         def plot(self, **kwargs) -> None:
             fig, axs = plt.subplots(
                 self.subplots_width,
@@ -242,7 +242,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
         Класс для унификации логики построения гистограмм.
       ]
     )
-  
+
     + Для построения гистограмм используется функция `sns.histplot`. В результате построения диаграмм получены гистограммы, которые изображены на @classes_hists. Лучшим образом данные описывает гистограмма с 30 бинами, так как такое количество бинов позволяет отобразить больше деталей. Результат изображён на @classes_hists.
 
       #figure(
@@ -251,9 +251,9 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
         ],
         image("images/classes_hists.png")
       ) <classes_hists>
-    
+
     + Для добавления разделения по признаку "Label" необходимо в аргументах функции `sns.histplot` указать параметр `hue='Label'`. А также для того чтобы убрать пересечение необходимо указать параметр `multiple='stack'`. Результат изображён на @classes_hists_labeled_stacked.
-    
+
       #figure(
         caption: [
           Гистрограмма распределений для каждого признака с разделением по меткам и суммированием бинов.
@@ -262,14 +262,14 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       ) <classes_hists_labeled_stacked>
 
       Такая же гистограмма, но с пересечением, изображена на @classes_hists_labeled.
-      
+
       #figure(
         caption: [
           Гистрограмма распределений для каждого признака с разделением по меткам и пересечением бинов.
         ],
         image("images/classes_hists_labeled.png")
       ) <classes_hists_labeled>
-      
+
   + Для включения отображения в виде ступенек используется параметр `element` функции `sns.histplot()` со значением `'step'`. Результат изображён на @classes_hists_labeled_step.
 
     #figure(
@@ -278,7 +278,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       ],
       image("images/classes_hists_labeled_step.png")
     ) <classes_hists_labeled_step>
-  
+
   + Для добавления ядерных функций плотности на каждую гистограмму нужно передать флаг `kde=True` в функцию `sns.histplot()`. Результат построения изображён на @classes_hists_labeled_step_kde.
 
     #figure(
@@ -287,15 +287,15 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       ],
       image("images/classes_hists_labeled_step_kde.png")
     ) <classes_hists_labeled_step_kde>
-  
+
 + Изучение набора данных с использованием NumPy:
   + Для загрузки данных с помощью NumPy используется функция `np.genfromtxt()` с параметрами
     - `delimiter=','`: указание разделителя между значениями;
     - `names=True`: для сопоставления заголовка из файла каждому столбцу считанного структурированного массива;
     - `usecols=range(1,7)`: для использования всех столбцов кроме первого.
-  
+
   + Для вывода данных используется оператор индексирования: `data[0:10]`.
-  
+
   + Характеристики рассчитаны с помощью метода `numpy_describe()`, который в качестве входа принимает считанный ранее структурированный массив. Код функции представлен в @numpy_describe.
 
     #figure(
@@ -321,13 +321,13 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       caption: [
         Код метода `numpy_describe`.
       ],
-      
+
     ) <numpy_describe>
 
     Из всех использованных в `numpy_describe` функций NumPy только `np.std()` дала смещённую оценку, поэтому для её корректировки был добавлен параметр `ddof=1`.
 
     Представленный код в результате выдаёт вывод как в @numpy_describe_example.
-    
+
     #figure(
       ```
       count	 100.0000  100.0000  100.0000  100.0000  ...
@@ -342,9 +342,9 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       caption: [
         Пример работы метода `numpy_describe`.
       ],
-      
+
     ) <numpy_describe_example>
-    
+
 + Преобразование данных:
   + Полученные с использованием разных энкодеров результаты представлены в @label_onehot_cmp.
     #figure(
@@ -352,7 +352,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
         Сравнение результатов LabelEncoder и OneHotEncoder
       ],
       table(
-        columns: 2,
+        columns: (50%, 50%),
         align: center,
         [*LabelEncoder*], [*OneHotEncoder*],
         [
@@ -372,12 +372,12 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
       ),
     ) <label_onehot_cmp>
 
-    Оба энкодера имеют метод для обучения с одинаковым названием: `fit()`. Также концептуально они оба сопоставляют каждому уникальному слову в обучающей выборке какой-то уникальный индекс. После обучения `LabelEncoder` для поданного в него значения из обучающей выборки возвращает уникальный индекс этого элемента. У такого метода есть минус: некоторые модели могут предсказать нецелое значение, тогда не будет понятно какому классу сопоставить подобный индекс. Напротив, `OneHotEncoder` позволяет хранить описание категории или группы категорий в виде бинарного вектора. Например, на одинаковых обучающих данных размера 3, если `LabelEncoder` выдаст 2, то `OneHotEncoder` выдаст `(0, 1, 0)`. Проблему `LabelEncoder` решает с помощью своей структуры - это бинарный вектор, тогда если на выход будет получено `(1, 1, 0)` это будет означать что выход имеет признаки сразу двух категорий (в случае условного 3.5 для `LabelEncoder` такого сказать точно нельзя). 
-  
+    Оба энкодера имеют метод для обучения с одинаковым названием: `fit()`. Также концептуально они оба сопоставляют каждому уникальному слову в обучающей выборке какой-то уникальный индекс. После обучения `LabelEncoder` для поданного в него значения из обучающей выборки возвращает уникальный индекс этого элемента. У такого метода есть минус: некоторые модели могут предсказать нецелое значение, тогда не будет понятно какому классу сопоставить подобный индекс. Напротив, `OneHotEncoder` позволяет хранить описание категории или группы категорий в виде бинарного вектора. Например, на одинаковых обучающих данных размера 3, если `LabelEncoder` выдаст 2, то `OneHotEncoder` выдаст `(0, 1, 0)`. Проблему `LabelEncoder` решает с помощью своей структуры - это бинарный вектор, тогда если на выход будет получено `(1, 1, 0)` это будет означать что выход имеет признаки сразу двух категорий (в случае условного 3.5 для `LabelEncoder` такого сказать точно нельзя).
+
   + Для датафрейма из п. 1.4, получите все столбцы признаков (столбцы не содержащие метки классов). Преобразуйте полученные столбцы в массив NumPy.
 
     Преобразование класс `DataFrame` в NumPy массив производится с помощью метода класса `DataFrame` `to_numpy`. Полученный массив является двумерным массивом наблюдений.
-  
+
   + Для массива NumPy из п. 3.2 примените StandardScaler, MinMaxScaler, MaxAbsScaler и RobustScaler. Для каждого из результатов постройте гистограммы по каждому признаку без разделения по классам. В чем различия между такими преобразованиями данных? Какая трансформация подходит лучше всего под ваш датасет?
 
     Нормализованные данные для каждого признака представлены в @scalers_by_features.
@@ -423,4 +423,7 @@ https://github.com/JAkutenshi/eltechLaTeXTemplates/blob/master/LabReports/tex/ti
 
 #pagebreak()
 = Приложение А \ ИСХОДНЫЙ КОД
-Ссылка: 
+
+#show link: underline
+Ссылка: #link("https://github.com/artyoomi/ml-introduction")
+
